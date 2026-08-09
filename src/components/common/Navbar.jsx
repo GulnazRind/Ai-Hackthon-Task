@@ -54,7 +54,7 @@ const Navbar = () => {
             <span className="brand-text">Fitness</span>
           </Link>
           
-          <button className="menu-toggle" onClick={toggleMenu}>
+          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
             {isMenuOpen ? <RiCloseLine size={24} /> : <RiMenuLine size={24} />}
           </button>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
           <span className="brand-text">Fitness</span>
         </Link>
 
-        {/* Hamburger Menu Button */}
+        {/* Hamburger Menu Button - Hidden on desktop */}
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
           {isMenuOpen ? <RiCloseLine size={24} /> : <RiMenuLine size={24} />}
         </button>
