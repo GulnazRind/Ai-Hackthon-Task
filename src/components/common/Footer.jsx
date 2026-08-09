@@ -34,7 +34,7 @@ const Footer = () => {
             </span>
           </div>
           <p style={{ fontSize: '0.88rem', lineHeight: 1.6, margin: 0, color: '#9ca3af' }}>
-            Your personal AI-powered trainer for customized workouts, intelligent diet plans, and elite fitness tracking.
+            Your personal AI-powered trainer for customized Workouts, intelligent diet plans, and elite fitness tracking.
           </p>
         </div>
 
