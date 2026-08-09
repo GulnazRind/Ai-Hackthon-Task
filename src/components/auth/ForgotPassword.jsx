@@ -13,9 +13,9 @@ const ForgotPassword = () => {
     setLoading(true);
     try {
       await resetPassword(email);
-      setMessage('Password reset email sent! Check your inbox.');
+      setMessage('✅ Password reset email sent!');
     } catch (error) {
-      console.error('Error:', error);
+      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -26,39 +26,21 @@ const ForgotPassword = () => {
       <h2 className="form-title">🔑 Reset Password</h2>
       {message && (
         <div style={{
-          padding: '1rem',
-          borderRadius: '8px',
-          marginBottom: '1.5rem',
-          background: 'rgba(46, 204, 113, 0.2)',
-          border: '1px solid #2ecc71',
-          color: '#2ecc71',
-          textAlign: 'center'
-        }}>
-          {message}
-        </div>
+          padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem',
+          background: 'rgba(52,211,153,0.1)', border: '1px solid #34D399',
+          color: '#34D399', textAlign: 'center'
+        }}>{message}</div>
       )}
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>📧 Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="your@email.com"
-          />
+        <div className="form-group"><label>📧 Email</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="your@email.com" />
         </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-          style={{ width: '100%', justifyContent: 'center' }}
-          disabled={loading}
-        >
+        <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} disabled={loading}>
           {loading ? '⏳ Sending...' : '📧 Send Reset Email'}
         </button>
       </form>
       <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-        <Link to="/login" style={{ color: '#FFD700' }}>Back to Login</Link>
+        <Link to="/login" style={{ color: '#6C63FF' }}>Back to Login</Link>
       </div>
     </div>
   );

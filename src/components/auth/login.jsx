@@ -39,9 +39,9 @@ const Login = () => {
         </button>
       </form>
       <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-        <Link to="/register" style={{ color: '#FFD700' }}>Don't have an account? Register</Link>
+        <Link to="/register" style={{ color: '#6C63FF' }}>Don't have an account? Register</Link>
         <br />
-        <Link to="/forgot-password" style={{ color: '#888', fontSize: '0.9rem' }}>Forgot password?</Link>
+        <Link to="/forgot-password" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Forgot password?</Link>
       </div>
     </div>
   );

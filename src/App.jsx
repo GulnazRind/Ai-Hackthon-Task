@@ -28,13 +28,13 @@ import Onboarding from './components/user/Onboarding';
 // Admin Pages
 import AdminDashboard from './components/admin/AdminDashboard';
 
-import './App.css'; // ← This is where CSS should be imported
+import './App.css';
 
 // Admin Route Wrapper
 const AdminRoute = ({ children }) => {
   const { isAdmin, loading } = useAuth();
   if (loading) {
-    return <div style={{ textAlign: 'center', padding: '3rem', color: '#F5A623' }}>Loading...</div>;
+    return <div style={{ textAlign: 'center', padding: '3rem', color: '#6C63FF' }}>Loading...</div>;
   }
   return isAdmin ? children : <Navigate to="/dashboard" />;
 };
